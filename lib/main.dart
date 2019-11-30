@@ -9,7 +9,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData( primaryColor: Colors.pinkAccent, accentColor: Colors.pinkAccent, fontFamily: 'varela',
+      theme: ThemeData( 
+        brightness: Brightness.dark, 
+        accentColor: Colors.pinkAccent, 
+        //primaryColor: Colors.pink[800],
+        fontFamily: 'varela',
       ),
 
       // go to homepage --> this is the first screen

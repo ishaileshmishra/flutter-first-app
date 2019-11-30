@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 # Miscellaneous
 *.class
 *.log
@@ -74,8 +73,6 @@
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 =======
-=======
->>>>>>> e3f8caf7219560bbbe865504057e45565a03d560
 # See https://www.dartlang.org/guides/libraries/private-files
 
 # Files and directories created by pub
@@ -89,7 +86,4 @@ pubspec.lock
 # Directory created by dartdoc
 # If you don't generate documentation locally you can remove this line.
 doc/api/
-<<<<<<< HEAD
->>>>>>> e3f8caf7219560bbbe865504057e45565a03d560
-=======
 >>>>>>> e3f8caf7219560bbbe865504057e45565a03d560

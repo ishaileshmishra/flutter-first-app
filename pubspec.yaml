@@ -24,11 +24,25 @@ flutter:
         - asset: assets/fonts/Nunito/Nunito-Black.ttf
         - asset: assets/fonts/Nunito/Nunito-Bold.ttf
         - asset: assets/fonts/Nunito/Nunito-Light.ttf
+        - asset: assets/fonts/Nunito/Nunito-Light.ttf
           weight: 700
     - family: varela
       fonts:
         - asset: assets/fonts/varela/varela.ttf
           weight: 400
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
   assets:
-    - assets/images/logo.png
-    - assets/images/background.png
+    - assets/img/logo.png
+    - assets/img/background.png
+    - assets/img/mars.png
+    - assets/img/neptune.png
+    - assets/img/moon.png
+    - assets/img/earth.png
+    - assets/img/mercury.png
+    - assets/img/ic_distance.png
+    - assets/img/ic_gravity.png

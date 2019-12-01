@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:isage/utils.dart';
 
 class GridSectionClass extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
 

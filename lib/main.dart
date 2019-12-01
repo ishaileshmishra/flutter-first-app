@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:isage/features/presentation/pages/home_page.dart';
+import 'package:isage/features/presentation/ui/home/home_page.dart';
 
 void main() => runApp(MyApp());
 

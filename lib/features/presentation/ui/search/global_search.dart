@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:isage/features/presentation/pages/allAvailableProducts.dart';
 
 
 class GlobalSearch extends StatefulWidget {

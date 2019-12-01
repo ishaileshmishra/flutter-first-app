@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:isage/utils.dart';
 
 class LoginScreen extends StatefulWidget {
+
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -11,6 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+
 
 
     final emailField = TextField(
@@ -72,46 +75,52 @@ class _LoginScreenState extends State<LoginScreen> {
 
 
 
-
     return Scaffold(
-      body: Center(
-        child: Container(
-          //color: Colors.white,
 
-          child: Padding(
-            padding: const EdgeInsets.all(36.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(
-                  height: 100.0,
-                  child: Image.asset(
-                    "assets/images/logo.png",
-                    fit: BoxFit.contain,
+      appBar: AppBar(title: Text('Login', style: getVarelaStyle(),),),
+
+      body: SingleChildScrollView(
+
+        child: Center(
+          child: Container(
+            //color: Colors.white,
+
+            child: Padding(
+              padding: const EdgeInsets.all(36.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(
+                    height: 100.0,
+                    child: Image.asset(
+                      "assets/img/logo.png",
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                ),
-                SizedBox(height: 35.0),
-                emailField,
-                SizedBox(height: 10.0),
-                passwordField,
-                SizedBox(
-                  height: 35.0,
-                ),
-                loginButon,
-                SizedBox(
-                  height: 10.0,
-                ),
-                Text('If Not LoggedIn, Do Register'),
-                SizedBox(
-                  height: 10.0,
-                ),
-                registerButton,
-              ],
+                  SizedBox(height: 35.0),
+                  emailField,
+                  SizedBox(height: 10.0),
+                  passwordField,
+                  SizedBox(
+                    height: 35.0,
+                  ),
+                  loginButon,
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  Text('If Not LoggedIn, Do Register'),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  registerButton,
+                ],
+              ),
             ),
           ),
         ),
-      ),
+
+      )
     );
 
 

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:isage/features/data/datasources/catelog.dart';
-import 'package:isage/features/presentation/pages/global_search.dart';
-import 'package:isage/features/presentation/pages/login_screen.dart';
+import 'package:isage/features/data/models/catelog.dart';
+import 'package:isage/features/presentation/ui/allProducts/all_products.dart';
+import 'package:isage/features/presentation/ui/search/global_search.dart';
+import 'package:isage/features/presentation/ui/login/login_screen.dart';
 import 'package:isage/utils.dart';
-import 'package:isage/features/presentation/pages/GridItems.dart';
+import 'package:isage/features/presentation/ui/search/grid_sections.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomePage> {
 
   void _findLocation() async{
     print('locate me..');
+    Navigator.push( context, MaterialPageRoute(builder: (context) => AllAvailProducts()));
   }
 
   void _globalSearch(){
@@ -92,39 +94,44 @@ class _HomePageState extends State<HomePage> {
 
 
       // body is the majority of the screen.
-      body:Center(
+      body: SingleChildScrollView(
 
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
+        child: Center(
 
-            // show all the categories available
-            Container(
-              padding: EdgeInsets.zero,
-              child: getCategories(context, litOfItems),
-            ),
+          child: Column(
+
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+
+              // show all the categories available
+              Container(
+                padding: EdgeInsets.zero,
+                child: getCategories(context, litOfItems),
+              ),
+
+              // Login button if user is not logged in.
+              Container(
+                  padding: EdgeInsets.only(left: 18, right: 18, top: 8),
+                  child: registerButton
+              ),
+
+              //const SizedBox(height: 10),
+
+              Container(
+                padding: EdgeInsets.all(16),
+                child: Text('All the available categories', style: getVarelaStyle(), ),
+              ),
+
+              //creates a gridview for other items
 
 
-            // Login button if user is not logged in.
-            Container(
-              padding: EdgeInsets.only(left: 18, right: 18, top: 8),
-              child: registerButton
-            ),
 
-            //const SizedBox(height: 10),
-
-            Container(
-              padding: EdgeInsets.all(16),
-              child: Text('All the available categories', style: getVarelaStyle(), ),
-            ),
-
-
-
-          ],
+            ],
+          ),
         ),
-      ),
 
+      ),
 
       floatingActionButton: FloatingActionButton(
         tooltip: 'Add', // used by assistive technologies

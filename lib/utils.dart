@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 TextStyle getTextStyle() {
   // text style which defines a custom font
   return const TextStyle(
-    // set color of text
-      color: Colors.black,
+      // set color of text
+      //color: Colors.black,
       // set the font family as defined in pubspec.yaml
       fontFamily: 'Nunito',
       // set the font weight
@@ -47,30 +47,15 @@ getCategories(BuildContext context,  listOfContent){
               elevation: 5,
               margin: EdgeInsets.all(8)),
         );
-      }));
-}
+      }));}
 
 
 
-getDefaultBtn(String buttonText){
 
-  return Container(
-    padding: EdgeInsets.only(left: 18, right: 18),
-    child: SizedBox(
-      width: double.infinity,
-      // height: double.infinity,
-      child: RaisedButton(
-        onPressed: (){},
-        child: const Text('Login', style: TextStyle(fontSize: 20)),
-      ),
-    ),
-  );
 
-}
 
 
 getGradientBtn(String title){
-
   return Container(
     padding: EdgeInsets.all(16),
     child: RaisedButton(
@@ -95,3 +80,37 @@ getGradientBtn(String title){
   );
 
 }
+
+
+
+getAllProducts(){
+
+  return Container(
+
+    child: GridView.count(
+        crossAxisCount: 2,
+        childAspectRatio: 1.0,
+        padding: const EdgeInsets.all(4.0),
+        mainAxisSpacing: 4.0,
+        crossAxisSpacing: 4.0,
+        children: <String>[
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+          'http://www.for-example.org/img/main/forexamplelogo.png',
+        ].map((String url) {
+          return GridTile(
+              child: Image.network(url, fit: BoxFit.cover));
+        }).toList()),
+  );
+
+}
+
+

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:isage/features/data/datasources/catelog.dart';
+import 'package:isage/features/presentation/pages/global_search.dart';
+import 'package:isage/features/presentation/pages/login_screen.dart';
 import 'package:isage/utils.dart';
+import 'package:isage/features/presentation/pages/GridItems.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -25,15 +28,43 @@ class _HomePageState extends State<HomePage> {
 
   void _globalSearch(){
     print('global search..');
+    Navigator.push( context, MaterialPageRoute(builder: (context) => GlobalSearch()));
   }
 
   void _openDrawer(){
     print('open drawer..');
+    Navigator.push( context, MaterialPageRoute(builder: (context) => GridSectionClass()));
   }
+
+  void _navigateLogin(){
+    Navigator.push( context, MaterialPageRoute(builder: (context) => LoginScreen()));
+  }
+
+
+  TextStyle style = TextStyle(fontFamily: 'Nunito', fontSize: 15.0);
+
 
 
   @override
   Widget build(BuildContext context) {
+
+    final registerButton = Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(40.0),
+      color: Colors.pink,
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        //padding: EdgeInsets.only(top: 2, bottom: 2),//fromLTRB(20.0, 8.0, 8.0, 20.0),
+        onPressed: () {
+          //do network call API integration
+          _navigateLogin();
+        },
+        child: Text("Login",
+            textAlign: TextAlign.center,
+            style: style.copyWith(
+                color: Colors.white, fontWeight: FontWeight.normal)),
+      ),
+    );
 
 
     return Scaffold(
@@ -58,20 +89,38 @@ class _HomePageState extends State<HomePage> {
 
         ],
       ),
+
+
       // body is the majority of the screen.
       body:Center(
+
         child: Column(
           mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
 
+            // show all the categories available
             Container(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.zero,
               child: getCategories(context, litOfItems),
             ),
 
-            getDefaultBtn('Login'),
 
-            const SizedBox(height: 30),
+            // Login button if user is not logged in.
+            Container(
+              padding: EdgeInsets.only(left: 18, right: 18, top: 8),
+              child: registerButton
+            ),
+
+            //const SizedBox(height: 10),
+
+            Container(
+              padding: EdgeInsets.all(16),
+              child: Text('All the available categories', style: getVarelaStyle(), ),
+            ),
+
+
+
           ],
         ),
       ),
@@ -85,6 +134,8 @@ class _HomePageState extends State<HomePage> {
     );
     // This trailing comma makes auto-formatting nicer for build methods.
 
-
   }
 }
+
+
+

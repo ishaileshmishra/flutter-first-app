@@ -16,7 +16,7 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 
-<img src='https://github.com/ishaileshmishra/isage/blob/master/assets/scrnshot/scrn_home.png' width='250' height='500'/> -- <img src='https://github.com/ishaileshmishra/isage/blob/master/assets/scrnshot/scrn_home/scrn_detail.png' width='250' height='500'/> -- <img src='https://github.com/ishaileshmishra/isage/blob/master/assets/scrnshot/scrn_login.png' width='250' height='500'/> -- <img src='https://github.com/ishaileshmishra/isage/blob/master/assets/scrnshot/scrn_search.png' width='250' height='500'/> -- <img src='https://github.com/ishaileshmishra/isage/blob/master/assets/scrnshot/scrn_0.png' width='250' height='500'/> 
+<img src='https://github.com/ishaileshmishra/isage/blob/master/assets/scrnshot/scrn_home.png' width='250' height='520'/> -- <img src='https://github.com/ishaileshmishra/isage/blob/master/assets/scrnshot/scrn_detail.png' width='250' height='500'/> -- <img src='https://github.com/ishaileshmishra/isage/blob/master/assets/scrnshot/scrn_login.png' width='250' height='500'/> -- <img src='https://github.com/ishaileshmishra/isage/blob/master/assets/scrnshot/scrn_search.png' width='250' height='500'/> -- <img src='https://github.com/ishaileshmishra/isage/blob/master/assets/scrnshot/scrn_0.png' width='250' height='500'/> 
  
 
 
